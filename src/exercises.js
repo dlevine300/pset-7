@@ -2,16 +2,31 @@ function commonEnd(a, b) {
   if (!a || a.length === 0 || !b || b.length === 0) {
     return false;
   }
-  if (a[0] === b[0] || (a.length-1) === (b.length-1) ) {
+  if (a[0] === b[0]){
     return true;
+  } else if (a[a.length-1] === b[b.length-1]) {
+    return true;
+  } else {
+    return false;
   }
 };
+
 function endsMeet(values, n) {
-  // write your code here
-}
+  let array = [];
+  if (!values || values.length < n || n < 0) {
+    return array;
+  }
+  for (i = 0; i < n; i++) {
+    array.push(values[i]);
+   }
+   for (z = (values.length - n); z < values.length; z++) {
+     array.push(values[z])
+   }
+   return array
+ }
 
 function difference(numbers) {
-  // write your code here
+
 }
 
 function max(number) {
